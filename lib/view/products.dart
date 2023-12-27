@@ -305,8 +305,7 @@ class _ProductsPageState extends State<ProductsPage>
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Colors.white,
-                            primary: Colors.white,
+                            shadowColor: Colors.white, backgroundColor: Colors.white,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -332,8 +331,7 @@ class _ProductsPageState extends State<ProductsPage>
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Colors.red,
-                            primary: Colors.red,
+                            shadowColor: Colors.red, backgroundColor: Colors.red,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -728,8 +726,7 @@ class _ProductsPageState extends State<ProductsPage>
                                 onChanged: (String? newValue) {
                                   setState(() {
                                     dropdownvalueCategories = newValue!;
-                                    print(dropdownvalueCategories +
-                                        " is selected");
+                                    print("$dropdownvalueCategories is selected");
                                   });
                                 },
                               ),
@@ -764,7 +761,7 @@ class _ProductsPageState extends State<ProductsPage>
                                 onChanged: (String? newValue) {
                                   setState(() {
                                     dropdownvalueUnits = newValue!;
-                                    print(dropdownvalueUnits + " is selected");
+                                    print("$dropdownvalueUnits is selected");
                                   });
                                 },
                               ),
@@ -1014,8 +1011,7 @@ class _ProductsPageState extends State<ProductsPage>
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Colors.white,
-                            primary: Colors.white,
+                            shadowColor: Colors.white, backgroundColor: Colors.white,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -1042,8 +1038,7 @@ class _ProductsPageState extends State<ProductsPage>
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Theme.of(context).primaryColor,
-                            primary: Theme.of(context).primaryColor,
+                            shadowColor: Theme.of(context).primaryColor, backgroundColor: Theme.of(context).primaryColor,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -1818,7 +1813,8 @@ class _ProductsPageState extends State<ProductsPage>
         ),
         floatingActionButton: FloatingActionButton(
             backgroundColor: const Color(0xFF5138ED),
-            child: const Icon(Icons.add),
+            child: const Icon(Icons.add,
+                color: Colors.white),
             onPressed: () async {
               // _showProductForm(context);
               var categories = [
@@ -2038,8 +2034,7 @@ class _ProductsPageState extends State<ProductsPage>
                                             setState(() {
                                               dropdownvalueCategories =
                                                   newValue!;
-                                              print(dropdownvalueCategories +
-                                                  " is selected");
+                                              print("$dropdownvalueCategories is selected");
                                             });
                                           },
                                         ),
@@ -2076,8 +2071,7 @@ class _ProductsPageState extends State<ProductsPage>
                                           onChanged: (String? newValue) {
                                             setState(() {
                                               dropdownvalueUnits = newValue!;
-                                              print(dropdownvalueUnits +
-                                                  " is selected");
+                                              print("$dropdownvalueUnits is selected");
                                             });
                                           },
                                         ),
@@ -2334,8 +2328,7 @@ class _ProductsPageState extends State<ProductsPage>
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                       // minimumSize: const Size(20, 10),
-                                      shadowColor: Colors.white,
-                                      primary: Colors.white,
+                                      shadowColor: Colors.white, backgroundColor: Colors.white,
                                       // padding: const EdgeInsets.symmetric(
                                       //     horizontal: 100, vertical: 12),
                                       shape: RoundedRectangleBorder(
@@ -2365,8 +2358,7 @@ class _ProductsPageState extends State<ProductsPage>
                                     style: ElevatedButton.styleFrom(
                                       // minimumSize: const Size(20, 10),
                                       shadowColor:
-                                          Theme.of(context).primaryColor,
-                                      primary: Theme.of(context).primaryColor,
+                                          Theme.of(context).primaryColor, backgroundColor: Theme.of(context).primaryColor,
                                       // padding: const EdgeInsets.symmetric(
                                       //     horizontal: 100, vertical: 12),
                                       shape: RoundedRectangleBorder(

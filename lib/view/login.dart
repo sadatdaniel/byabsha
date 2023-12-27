@@ -279,7 +279,7 @@ class _HomeState extends State<Home> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         // minimumSize: const Size(20, 10),
-                        primary: Theme.of(context).primaryColor,
+                        backgroundColor: Theme.of(context).primaryColor,
                         // padding: const EdgeInsets.symmetric(
                         //     horizontal: 100, vertical: 12),
                         shape: RoundedRectangleBorder(
@@ -297,12 +297,12 @@ class _HomeState extends State<Home> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(content: Text('Processing Data')),
                           );
-                          String _email = newEmailController.text;
-                          String _password = newPassController.text;
+                          String email = newEmailController.text;
+                          String password = newPassController.text;
                           AuthenticationHelper authHelper =
                               AuthenticationHelper();
                           authHelper
-                              .signUp(email: _email, password: _password)
+                              .signUp(email: email, password: password)
                               .then((result) async {
                             if (result == null) {
                               Navigator.pushReplacement(
@@ -469,7 +469,7 @@ class _HomeState extends State<Home> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         // minimumSize: const Size(20, 10),
-                        primary: Theme.of(context).primaryColor,
+                        backgroundColor: Theme.of(context).primaryColor,
                         // padding: const EdgeInsets.symmetric(
                         //     horizontal: 100, vertical: 12),
                         shape: RoundedRectangleBorder(
@@ -482,8 +482,8 @@ class _HomeState extends State<Home> {
                       ),
                       onPressed: () async {
                         if (_resetformKey.currentState!.validate()) {
-                          String _email = resetEmailController.text;
-                          AuthenticationHelper().resetPassword(email: _email);
+                          String email = resetEmailController.text;
+                          AuthenticationHelper().resetPassword(email: email);
                           await NDialog(
                             dialogStyle: DialogStyle(
                               titleDivider: false,
@@ -567,8 +567,7 @@ class _HomeState extends State<Home> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         // minimumSize: const Size(20, 10),
-                        shadowColor: Colors.white,
-                        primary: Colors.white,
+                        shadowColor: Colors.white, backgroundColor: Colors.white,
                         // padding: const EdgeInsets.symmetric(
                         //     horizontal: 100, vertical: 12),
                         shape: RoundedRectangleBorder(
@@ -600,9 +599,9 @@ class _HomeState extends State<Home> {
                   const SizedBox(
                     height: 10,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 300,
-                    child: Row(children: const [
+                    child: Row(children: [
                       Expanded(child: Divider()),
                       Text(" or Sign in with Email ", style: kS2TextStyle),
                       Expanded(child: Divider()),
@@ -732,7 +731,7 @@ class _HomeState extends State<Home> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         // minimumSize: const Size(20, 10),
-                        primary: Theme.of(context).primaryColor,
+                        backgroundColor: Theme.of(context).primaryColor,
                         // padding: const EdgeInsets.symmetric(
                         //     horizontal: 100, vertical: 12),
                         shape: RoundedRectangleBorder(
@@ -745,12 +744,12 @@ class _HomeState extends State<Home> {
                       ),
                       onPressed: () {
                         if (_loginformKey.currentState!.validate()) {
-                          String _email = loginEmailController.text;
-                          String _password = loginPasswordController.text;
+                          String email = loginEmailController.text;
+                          String password = loginPasswordController.text;
                           AuthenticationHelper authHelper =
                               AuthenticationHelper();
                           authHelper
-                              .signIn(email: _email, password: _password)
+                              .signIn(email: email, password: password)
                               .then((result) async {
                             if (result == null) {
                               Navigator.pushReplacement(

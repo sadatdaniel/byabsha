@@ -169,461 +169,461 @@ class _OrdersState extends State<Orders> {
       //     returnSpecificCustomer(streamSnapshot["Castomer Name"]);
 
       return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child:
-              // Card(
-              //   child: SizedBox(
-              //     height: 200,
-              //     child: Padding(
-              //       padding: const EdgeInsets.all(8.0),
-              //       child: Column(
-              //         children: buildTextRows(
-              //             decoded,
-              //             paymentType,
-              //             customerName,
-              //             orderDate,
-              //             addtionalNote,
-              //             approximateDelivery,
-              //             isDelivered,
-              //             orderRef),
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              Card(
-            shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(15.0))),
-            elevation: 2,
-            margin: const EdgeInsets.all(12.0),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Theme(
-                data: Theme.of(context)
-                    .copyWith(dividerColor: Colors.transparent),
-                child: ExpansionTile(
-                  backgroundColor: Colors.white,
-                  title: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Expanded(
-                            child: Text(
-                              "Order Details",
-                              style: kH2TextStyle(
-                                18,
-                                const Color.fromARGB(255, 111, 104, 161),
-                              ),
-                            ),
-                          ),
-                          // const Spacer(),
-                          // Column(
-                          //   crossAxisAlignment: CrossAxisAlignment.end,
-                          //   children: [
-                          //     Text(
-                          //       "Initial: ${_resultsList[index].data()["Initial"].toString()}",
-                          //       style: kTableTextStyle.copyWith(
-                          //           fontSize: 18, color: Colors.black),
-                          //     ),
-                          //   ],
-                          // )
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      DataTable(
-                        border: TableBorder.all(
-                            width: 0.4,
-                            borderRadius: BorderRadius.circular(10)),
-                        // showBottomBorder: true,
-
-                        columns: [
-                          DataColumn(
-                            label: Flexible(
-                              child: Text(
-                                "Product Name",
-                                style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    overflow: TextOverflow.fade),
-                              ),
-                            ),
-                          ),
-                          DataColumn(
-                            label: Flexible(
-                              child: Text(
-                                "Number of Items",
-                                style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    overflow: TextOverflow.fade),
-                              ),
-                            ),
-                          ),
-                          DataColumn(
-                            label: Flexible(
-                              child: Text(
-                                "Price of Item",
-                                style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    overflow: TextOverflow.fade),
-                              ),
-                            ),
-                          ),
-                          DataColumn(
-                            label: Flexible(
-                              child: Text(
-                                "Total",
-                                style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    overflow: TextOverflow.fade),
-                              ),
-                            ),
-                          ),
-                        ],
-                        rows: buildTextRows(
-                            decoded,
-                            paymentType,
-                            customerName,
-                            orderDate,
-                            additionalNote,
-                            approximateDelivery,
-                            isDelivered,
-                            orderRef),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: Text(
-                                "Order Date: $orderDate",
-                                style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    // fontWeight: FontWeight.bold,
-                                    overflow: TextOverflow.fade),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: Text(
-                                "Approximate Delivery: $approximateDelivery",
-                                style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    // fontWeight: FontWeight.bold,
-                                    overflow: TextOverflow.fade),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: Text(
-                                "Additional Notes: $additionalNote",
-                                style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    // fontWeight: FontWeight.bold,
-                                    overflow: TextOverflow.fade),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      // Padding(
-                      //   padding: const EdgeInsets.symmetric(vertical: 20),
-                      //   child: Row(
-                      //     mainAxisAlignment: MainAxisAlignment.end,
-                      //     children: [
-                      //       Flexible(
-                      //         child: Text(
-                      //           "Total Price: $totalPrice \$",
-                      //           style: kS2TextStyle.copyWith(
-                      //               color: Colors.black,
-                      //               fontSize: 18,
-                      //               fontWeight: FontWeight.bold,
-                      //               overflow: TextOverflow.fade),
-                      //         ),
-                      //       ),
-                      //     ],
-                      //   ),
-                      // )
-                    ],
-                  ),
-                  trailing: const SizedBox(),
+        padding: const EdgeInsets.all(8.0),
+        child:
+            // Card(
+            //   child: SizedBox(
+            //     height: 200,
+            //     child: Padding(
+            //       padding: const EdgeInsets.all(8.0),
+            //       child: Column(
+            //         children: buildTextRows(
+            //             decoded,
+            //             paymentType,
+            //             customerName,
+            //             orderDate,
+            //             addtionalNote,
+            //             approximateDelivery,
+            //             isDelivered,
+            //             orderRef),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            Card(
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(15.0))),
+          elevation: 2,
+          margin: const EdgeInsets.all(12.0),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Theme(
+              data:
+                  Theme.of(context).copyWith(dividerColor: Colors.transparent),
+              child: ExpansionTile(
+                backgroundColor: Colors.white,
+                title: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     const SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 60),
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey[600],
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15.0),
-                        child: Text(
-                          "To",
-                          style: kS2TextStyle.copyWith(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "• Name: ${currentCustomer.name.toString()}",
-                                  style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                                const SizedBox(height: 5),
-                                Text(
-                                  "• Initial: ${currentCustomer.initial..toString()}",
-                                  style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                                const SizedBox(height: 5),
-                                Text(
-                                  "• Mobile No: ${currentCustomer.mobile.toString()}",
-                                  style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "• Profession: ${currentCustomer.profession.toString()}",
-                                    style: kS2TextStyle.copyWith(
-                                      color: Colors.black,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 5),
-                                  Text(
-                                    "• Birthday: ${currentCustomer.date.toString()}",
-                                    style: kS2TextStyle.copyWith(
-                                      color: Colors.black,
-                                      fontSize: 18,
-                                    ),
-                                  )
-                                ]),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 60),
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey[600],
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15.0),
-                        child: Text(
-                          "Shipping Address",
-                          style: kS2TextStyle.copyWith(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "• Flat No: ${currentCustomer.flatNo.toString()}",
-                                  style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                                const SizedBox(height: 5),
-                                Text(
-                                  "• Road No: ${currentCustomer.roadNo.toString()}",
-                                  style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                                const SizedBox(height: 5),
-                                Text(
-                                  "• Area: ${currentCustomer.area.toString()}",
-                                  style: kS2TextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "• City: ${currentCustomer.city.toString()}",
-                                    style: kS2TextStyle.copyWith(
-                                      color: Colors.black,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 5),
-                                  Text(
-                                    "• Country: ${currentCustomer.country.toString()}",
-                                    style: kS2TextStyle.copyWith(
-                                      color: Colors.black,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                ]),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 60),
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey[600],
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 15.0),
-                          child: TextButton(
-                            child: const Text(
-                              "Is Delivered?",
+                        Expanded(
+                          child: Text(
+                            "Order Details",
+                            style: kH2TextStyle(
+                              18,
+                              const Color.fromARGB(255, 111, 104, 161),
                             ),
-                            onPressed: () {
-                              // print(orderRef);
-                              changeDeliveryStutusOrder(orderRef);
-                            },
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 15.0),
-                          child: TextButton(
-                            child: const Text(
-                              "Remove Order",
-                            ),
-                            onPressed: () {
-                              // print(orderRef);
-                              deleteOrder(orderRef);
-                            },
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 15.0),
-                          child: TextButton(
-                            child: const Text(
-                              "Print Receipt",
-                            ),
-                            onPressed: () {
-                              // print(orderRef);
-                              deleteOrder(orderRef);
-                            },
-                          ),
-                        ),
+                        // const Spacer(),
+                        // Column(
+                        //   crossAxisAlignment: CrossAxisAlignment.end,
+                        //   children: [
+                        //     Text(
+                        //       "Initial: ${_resultsList[index].data()["Initial"].toString()}",
+                        //       style: kTableTextStyle.copyWith(
+                        //           fontSize: 18, color: Colors.black),
+                        //     ),
+                        //   ],
+                        // )
                       ],
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
+                    DataTable(
+                      border: TableBorder.all(
+                          width: 0.4, borderRadius: BorderRadius.circular(10)),
+                      // showBottomBorder: true,
+
+                      columns: [
+                        DataColumn(
+                          label: Flexible(
+                            child: Text(
+                              "Product Name",
+                              style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  overflow: TextOverflow.fade),
+                            ),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Flexible(
+                            child: Text(
+                              "Number of Items",
+                              style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  overflow: TextOverflow.fade),
+                            ),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Flexible(
+                            child: Text(
+                              "Price of Item",
+                              style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  overflow: TextOverflow.fade),
+                            ),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Flexible(
+                            child: Text(
+                              "Total",
+                              style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  overflow: TextOverflow.fade),
+                            ),
+                          ),
+                        ),
+                      ],
+                      rows: buildTextRows(
+                          decoded,
+                          paymentType,
+                          customerName,
+                          orderDate,
+                          additionalNote,
+                          approximateDelivery,
+                          isDelivered,
+                          orderRef),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Flexible(
+                            child: Text(
+                              "Order Date: $orderDate",
+                              style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  // fontWeight: FontWeight.bold,
+                                  overflow: TextOverflow.fade),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Flexible(
+                            child: Text(
+                              "Approximate Delivery: $approximateDelivery",
+                              style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  // fontWeight: FontWeight.bold,
+                                  overflow: TextOverflow.fade),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Flexible(
+                            child: Text(
+                              "Additional Notes: $additionalNote",
+                              style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  // fontWeight: FontWeight.bold,
+                                  overflow: TextOverflow.fade),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // Padding(
+                    //   padding: const EdgeInsets.symmetric(vertical: 20),
+                    //   child: Row(
+                    //     mainAxisAlignment: MainAxisAlignment.end,
+                    //     children: [
+                    //       Flexible(
+                    //         child: Text(
+                    //           "Total Price: $totalPrice \$",
+                    //           style: kS2TextStyle.copyWith(
+                    //               color: Colors.black,
+                    //               fontSize: 18,
+                    //               fontWeight: FontWeight.bold,
+                    //               overflow: TextOverflow.fade),
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // )
                   ],
                 ),
+                trailing: const SizedBox(),
+                children: <Widget>[
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 60),
+                    child: Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        "To",
+                        style: kS2TextStyle.copyWith(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "• Name: ${currentCustomer.name.toString()}",
+                                style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              const SizedBox(height: 5),
+                              Text(
+                                "• Initial: ${currentCustomer.initial..toString()}",
+                                style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              const SizedBox(height: 5),
+                              Text(
+                                "• Mobile No: ${currentCustomer.mobile.toString()}",
+                                style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "• Profession: ${currentCustomer.profession.toString()}",
+                                  style: kS2TextStyle.copyWith(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                const SizedBox(height: 5),
+                                Text(
+                                  "• Birthday: ${currentCustomer.date.toString()}",
+                                  style: kS2TextStyle.copyWith(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                )
+                              ]),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 60),
+                    child: Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: Text(
+                        "Shipping Address",
+                        style: kS2TextStyle.copyWith(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "• Flat No: ${currentCustomer.flatNo.toString()}",
+                                style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              const SizedBox(height: 5),
+                              Text(
+                                "• Road No: ${currentCustomer.roadNo.toString()}",
+                                style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              const SizedBox(height: 5),
+                              Text(
+                                "• Area: ${currentCustomer.area.toString()}",
+                                style: kS2TextStyle.copyWith(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "• City: ${currentCustomer.city.toString()}",
+                                  style: kS2TextStyle.copyWith(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                const SizedBox(height: 5),
+                                Text(
+                                  "• Country: ${currentCustomer.country.toString()}",
+                                  style: kS2TextStyle.copyWith(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ]),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 60),
+                    child: Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15.0),
+                        child: TextButton(
+                          child: const Text(
+                            "Is Delivered?",
+                          ),
+                          onPressed: () {
+                            // print(orderRef);
+                            changeDeliveryStutusOrder(orderRef);
+                          },
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15.0),
+                        child: TextButton(
+                          child: const Text(
+                            "Remove Order",
+                          ),
+                          onPressed: () {
+                            // print(orderRef);
+                            deleteOrder(orderRef);
+                          },
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 15.0),
+                        child: TextButton(
+                          child: const Text(
+                            "Print Receipt",
+                          ),
+                          onPressed: () {
+                            // print(orderRef);
+                            deleteOrder(orderRef);
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                ],
               ),
             ),
-          ));
+          ),
+        ),
+      );
     }
 
     CustomerModel? returnSpecificCustomer(
@@ -653,57 +653,182 @@ class _OrdersState extends State<Orders> {
 
     List<Widget> orderLists = [
       // ignore: avoid_unnecessary_containers
-      StreamBuilder(
-        stream: FirebaseFirestore.instance
-            .collection('User')
-            .doc(widget.user.uid)
-            .collection('Customers')
-            .snapshots(),
-        builder: (BuildContext context,
-            AsyncSnapshot<QuerySnapshot> customerSnapshot) {
-          return !customerSnapshot.hasData
-              ? const Center(
-                  child: CircularProgressIndicator(),
-                )
-              : StreamBuilder(
+      Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        // elevation: 2,
+        // color: Colors.white,
+        color: const Color.fromARGB(255, 233, 240, 239),
+        // ignore: prefer_const_constructors
+        child: Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Column(
+            children: [
+              const Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 30),
+                    child: Flexible(
+                      child: Text(
+                        "Pending Orders",
+                        style: kH1TextStyle,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Flexible(
+                child: StreamBuilder(
                   stream: FirebaseFirestore.instance
                       .collection('User')
                       .doc(widget.user.uid)
-                      .collection('Orders')
+                      .collection('Customers')
                       .snapshots(),
                   builder: (BuildContext context,
-                      AsyncSnapshot<QuerySnapshot> orderSnapshot) {
-                    return !orderSnapshot.hasData
+                      AsyncSnapshot<QuerySnapshot> customerSnapshot) {
+                    return !customerSnapshot.hasData
                         ? const Center(
                             child: CircularProgressIndicator(),
                           )
-                        : ListView.builder(
-                            itemCount: orderSnapshot.data?.docs.length,
-                            itemBuilder: (context, index) {
-                              // print(customerSnapshot);
-                              if (orderSnapshot.data?.docs[index]
-                                      ["isDeliverd"] ==
-                                  false) {
-                                //getSpecific user
-                                //
+                        : StreamBuilder(
+                            stream: FirebaseFirestore.instance
+                                .collection('User')
+                                .doc(widget.user.uid)
+                                .collection('Orders')
+                                .snapshots(),
+                            builder: (BuildContext context,
+                                AsyncSnapshot<QuerySnapshot> orderSnapshot) {
+                              return !orderSnapshot.hasData
+                                  ? const Center(
+                                      child: CircularProgressIndicator(),
+                                    )
+                                  : ListView.builder(
+                                      itemCount:
+                                          orderSnapshot.data?.docs.length,
+                                      itemBuilder: (context, index) {
+                                        // print(customerSnapshot);
+                                        if (orderSnapshot.data?.docs[index]
+                                                ["isDeliverd"] ==
+                                            false) {
+                                          //getSpecific user
+                                          //
 
-                                CustomerModel? userModel =
-                                    returnSpecificCustomer(
-                                        orderSnapshot.data?.docs[index]
-                                            ["Castomer Name"],
-                                        customerSnapshot);
+                                          CustomerModel? userModel =
+                                              returnSpecificCustomer(
+                                                  orderSnapshot
+                                                          .data?.docs[index]
+                                                      ["Castomer Name"],
+                                                  customerSnapshot);
 
-                                return orderCard(
-                                    orderSnapshot.data?.docs[index],
-                                    userModel!);
-                              } else {
-                                return Container();
-                              }
+                                          return orderCard(
+                                              orderSnapshot.data?.docs[index],
+                                              userModel!);
+                                        } else {
+                                          return Container();
+                                        }
+                                      },
+                                    );
                             },
                           );
                   },
-                );
-        },
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+
+      Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        // elevation: 2,
+        // color: Colors.white,
+        color: const Color.fromARGB(255, 233, 240, 239),
+        // ignore: prefer_const_constructors
+        child: Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Column(
+            children: [
+              const Row(
+                children: [
+                  Flexible(
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 30),
+                      child: Text(
+                        "All Orders",
+                        style: kH1TextStyle,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Flexible(
+                child: StreamBuilder(
+                  stream: FirebaseFirestore.instance
+                      .collection('User')
+                      .doc(widget.user.uid)
+                      .collection('Customers')
+                      .snapshots(),
+                  builder: (BuildContext context,
+                      AsyncSnapshot<QuerySnapshot> customerSnapshot) {
+                    return !customerSnapshot.hasData
+                        ? const Center(
+                            child: CircularProgressIndicator(),
+                          )
+                        : StreamBuilder(
+                            stream: FirebaseFirestore.instance
+                                .collection('User')
+                                .doc(widget.user.uid)
+                                .collection('Orders')
+                                .snapshots(),
+                            builder: (BuildContext context,
+                                AsyncSnapshot<QuerySnapshot> orderSnapshot) {
+                              return !orderSnapshot.hasData
+                                  ? const Center(
+                                      child: CircularProgressIndicator(),
+                                    )
+                                  : ListView.builder(
+                                      itemCount:
+                                          orderSnapshot.data?.docs.length,
+                                      itemBuilder: (context, index) {
+                                        // print(customerSnapshot);
+                                        if (orderSnapshot.data?.docs[index]
+                                                ["isDeliverd"] ==
+                                            true) {
+                                          //getSpecific user
+                                          //
+
+                                          CustomerModel? userModel =
+                                              returnSpecificCustomer(
+                                                  orderSnapshot
+                                                          .data?.docs[index]
+                                                      ["Castomer Name"],
+                                                  customerSnapshot);
+
+                                          return orderCard(
+                                              orderSnapshot.data?.docs[index],
+                                              userModel!);
+                                        } else {
+                                          return Container();
+                                        }
+                                      },
+                                    );
+                            },
+                          );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
 
       // getOrderSnapshot() async {
@@ -715,88 +840,41 @@ class _OrdersState extends State<Orders> {
 
       //   return data;
       // }
-
-      StreamBuilder(
-        stream: FirebaseFirestore.instance
-            .collection('User')
-            .doc(widget.user.uid)
-            .collection('Customers')
-            .snapshots(),
-        builder: (BuildContext context,
-            AsyncSnapshot<QuerySnapshot> customerSnapshot) {
-          return !customerSnapshot.hasData
-              ? const Center(
-                  child: CircularProgressIndicator(),
-                )
-              : StreamBuilder(
-                  stream: FirebaseFirestore.instance
-                      .collection('User')
-                      .doc(widget.user.uid)
-                      .collection('Orders')
-                      .snapshots(),
-                  builder: (BuildContext context,
-                      AsyncSnapshot<QuerySnapshot> orderSnapshot) {
-                    return !orderSnapshot.hasData
-                        ? const Center(
-                            child: CircularProgressIndicator(),
-                          )
-                        : ListView.builder(
-                            itemCount: orderSnapshot.data?.docs.length,
-                            itemBuilder: (context, index) {
-                              // print(customerSnapshot);
-                              if (orderSnapshot.data?.docs[index]
-                                      ["isDeliverd"] ==
-                                  true) {
-                                //getSpecific user
-                                //
-
-                                CustomerModel? userModel =
-                                    returnSpecificCustomer(
-                                        orderSnapshot.data?.docs[index]
-                                            ["Castomer Name"],
-                                        customerSnapshot);
-
-                                return orderCard(
-                                    orderSnapshot.data?.docs[index],
-                                    userModel!);
-                              } else {
-                                return Container();
-                              }
-                            },
-                          );
-                  },
-                );
-        },
-      ),
     ];
 
     MultiSplitView multiSplitView = MultiSplitView(
-        children: orderLists,
-        dividerBuilder:
-            (axis, index, resizable, dragging, highlighted, themeData) {
-          return Container(
-            color: dragging ? Colors.grey[300] : Colors.grey[100],
-            child: Icon(
-              Icons.drag_indicator,
-              color: highlighted ? Colors.grey[600] : Colors.grey[400],
-            ),
-          );
-        });
+      children: orderLists,
+      dividerBuilder:
+          (axis, index, resizable, dragging, highlighted, themeData) {
+        return Container(
+          color: dragging ? Colors.grey[300] : Colors.grey[100],
+          child: Icon(
+            Icons.drag_indicator,
+            color: highlighted ? Colors.grey[600] : Colors.grey[400],
+          ),
+        );
+      },
+    );
     // print("Printing from LIstviwer");
     // print(customerSnapshot);
     MultiSplitViewTheme theme = MultiSplitViewTheme(
-      child: multiSplitView,
       data: MultiSplitViewThemeData(dividerThickness: 24),
+      child: multiSplitView,
     );
     return Expanded(
       child: Scaffold(
-        body: Column(
-          children: [Expanded(child: theme)],
+        body: Padding(
+          padding: const EdgeInsets.only(top: 30.0, left: 30.0, right: 30.0),
+          child: Column(
+            children: [Expanded(child: theme)],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: const Color(0xFF5138ED),
           onPressed: newInventoryPopup,
-          child: const Icon(Icons.add),
+          child: const Icon(Icons.add,
+          color: Colors.white,
+          ),
         ),
       ),
     );
@@ -823,20 +901,20 @@ class _OrdersState extends State<Orders> {
     //   return data.docs;
     // }
 
-    var _inventorySnapshot = await getInventorySnapshot();
+    var inventorySnapshot = await getInventorySnapshot();
 
-    List _selectedProducts = [];
-    final CarouselController _controller = CarouselController();
+    List selectedProducts = [];
+    final CarouselController controller = CarouselController();
     List<String> customers = [];
-    TextEditingController _additionalNotesController = TextEditingController();
+    TextEditingController additionalNotesController = TextEditingController();
     TextEditingController sellingDate = TextEditingController();
     TextEditingController approxDeliveryDate = TextEditingController();
-    DateTime _date = DateTime.now();
+    DateTime date = DateTime.now();
 
     void resetTextControllers() {
       approxDeliveryDate.clear();
       sellingDate.clear();
-      _additionalNotesController.clear();
+      additionalNotesController.clear();
     }
 
     getCustomerSnapshot() async {
@@ -878,7 +956,7 @@ class _OrdersState extends State<Orders> {
 
     // Map<String, dynamic>? selectedCustomerSnapshot;
 
-    bool _isSecondPage = false;
+    bool isSecondPage = false;
 
     // returnSupplierReference(String supplier) {
     //   for (var element in customerSnapshots.docs) {
@@ -888,7 +966,7 @@ class _OrdersState extends State<Orders> {
     //   }
     // }
 
-    _onPriceUpdate(int index, String val) async {
+    onPriceUpdate(int index, String val) async {
       int foundKey = -1;
       for (var map in _priceValues) {
         if (map.containsKey("id")) {
@@ -910,12 +988,12 @@ class _OrdersState extends State<Orders> {
       _priceValues.add(json);
     }
 
-    _priceRow(int index) {
+    priceRow(int index) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Price of ${_selectedProducts[index]["Product Title"]}:',
+            'Price of ${selectedProducts[index]["Product Title"]}:',
             style: kH2TextStyle(12, Colors.black),
           ),
           const SizedBox(width: 30),
@@ -929,7 +1007,7 @@ class _OrdersState extends State<Orders> {
                         contentPadding: const EdgeInsets.only(
                             left: 10, top: 10, bottom: 10)),
                 onChanged: (val) {
-                  _onPriceUpdate(index, val);
+                  onPriceUpdate(index, val);
                 },
               ),
             ),
@@ -942,7 +1020,7 @@ class _OrdersState extends State<Orders> {
     ///
     ///
 
-    _onNumberOfItemsUpdate(int index, String val) async {
+    onNumberOfItemsUpdate(int index, String val) async {
       int foundKey = -1;
       for (var map in _numberOfItemsValues) {
         if (map.containsKey("id")) {
@@ -964,12 +1042,12 @@ class _OrdersState extends State<Orders> {
       _numberOfItemsValues.add(json);
     }
 
-    _numberOfItemsRow(int index) {
+    numberOfItemsRow(int index) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Number of ${_selectedProducts[index]["Product Title"]}:',
+            'Number of ${selectedProducts[index]["Product Title"]}:',
             style: kH2TextStyle(12, Colors.black),
           ),
           const SizedBox(width: 30),
@@ -983,7 +1061,7 @@ class _OrdersState extends State<Orders> {
                         contentPadding: const EdgeInsets.only(
                             left: 10, top: 10, bottom: 10)),
                 onChanged: (val) {
-                  _onNumberOfItemsUpdate(index, val);
+                  onNumberOfItemsUpdate(index, val);
                 },
               ),
             ),
@@ -997,42 +1075,42 @@ class _OrdersState extends State<Orders> {
         context: context,
         builder: (BuildContext context) {
           return StatefulBuilder(builder: (context, setState) {
-            _priceCount = _selectedProducts.length;
-            _numberOfItemsCount = _selectedProducts.length;
+            _priceCount = selectedProducts.length;
+            _numberOfItemsCount = selectedProducts.length;
 
             final List<Widget> orderPages = [
               ListView.builder(
                 shrinkWrap: true,
-                itemCount: _inventorySnapshot.length,
+                itemCount: inventorySnapshot.length,
                 itemBuilder: (context, index) {
                   return Material(
                     child: Container(
                       color:
-                          _selectedProducts.contains(_inventorySnapshot[index])
+                          selectedProducts.contains(inventorySnapshot[index])
                               ? const Color.fromARGB(221, 206, 167, 243)
                               : null,
                       child: ListTile(
                         // selectedTileColor: ,
 
-                        title: Text(_inventorySnapshot[index]["Product Title"]),
-                        trailing: _selectedProducts
-                                .contains(_inventorySnapshot[index])
+                        title: Text(inventorySnapshot[index]["Product Title"]),
+                        trailing: selectedProducts
+                                .contains(inventorySnapshot[index])
                             ? const Icon(Icons.done)
                             : null,
                         onTap: () {
                           setState(() {
-                            _selectedProducts
-                                    .contains(_inventorySnapshot[index])
-                                ? _selectedProducts
-                                    .remove(_inventorySnapshot[index])
-                                : _selectedProducts
-                                    .add(_inventorySnapshot[index]);
+                            selectedProducts
+                                    .contains(inventorySnapshot[index])
+                                ? selectedProducts
+                                    .remove(inventorySnapshot[index])
+                                : selectedProducts
+                                    .add(inventorySnapshot[index]);
                           });
 
-                          print(_selectedProducts
-                              .contains(_inventorySnapshot[index]));
+                          print(selectedProducts
+                              .contains(inventorySnapshot[index]));
 
-                          print(_selectedProducts);
+                          print(selectedProducts);
                         },
                       ),
                     ),
@@ -1050,7 +1128,7 @@ class _OrdersState extends State<Orders> {
                         itemBuilder: ((context, index) {
                           return Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: _priceRow(index),
+                            child: priceRow(index),
                           );
                         }),
                       ),
@@ -1064,7 +1142,7 @@ class _OrdersState extends State<Orders> {
                         itemBuilder: ((context, index) {
                           return Padding(
                             padding: const EdgeInsets.only(top: 8, bottom: 8),
-                            child: _numberOfItemsRow(index),
+                            child: numberOfItemsRow(index),
                           );
                         }),
                       ),
@@ -1092,8 +1170,8 @@ class _OrdersState extends State<Orders> {
                             icon: const Icon(Icons.keyboard_arrow_down),
                             items: customers
                                 .map((item) => DropdownMenuItem<String>(
-                                      child: Text(item),
                                       value: item,
+                                      child: Text(item),
                                     ))
                                 .toList(),
                             onChanged: (String? newValue) {
@@ -1109,7 +1187,7 @@ class _OrdersState extends State<Orders> {
                                 // }
                                 // );
 
-                                print(selectedCustomer + " is selected");
+                                print("$selectedCustomer is selected");
                               });
                             },
                           ),
@@ -1128,14 +1206,14 @@ class _OrdersState extends State<Orders> {
                             icon: const Icon(Icons.keyboard_arrow_down),
                             items: paymentTypes
                                 .map((item) => DropdownMenuItem<String>(
-                                      child: Text(item),
                                       value: item,
+                                      child: Text(item),
                                     ))
                                 .toList(),
                             onChanged: (String? newValue) {
                               setState(() {
                                 selectedPaymentType = newValue!;
-                                print(selectedPaymentType + " is selected");
+                                print("$selectedPaymentType is selected");
                               });
                             },
                           ),
@@ -1169,7 +1247,7 @@ class _OrdersState extends State<Orders> {
                                     context: context,
                                     initialDate: DateTime.now(),
                                     firstDate: DateTime(1920),
-                                    lastDate: _date,
+                                    lastDate: date,
                                   ).then((selectedDate) {
                                     if (selectedDate != null) {
                                       sellingDate.text =
@@ -1222,7 +1300,7 @@ class _OrdersState extends State<Orders> {
                                     initialDate: DateTime.now(),
                                     firstDate: DateTime.now(),
                                     lastDate:
-                                        _date.add(const Duration(days: 30)),
+                                        date.add(const Duration(days: 30)),
                                   ).then((selectedDate) {
                                     if (selectedDate != null) {
                                       approxDeliveryDate.text =
@@ -1267,7 +1345,7 @@ class _OrdersState extends State<Orders> {
                                 keyboardType: TextInputType.multiline,
                                 maxLines: null,
                                 // expands: true,
-                                controller: _additionalNotesController,
+                                controller: additionalNotesController,
                                 style: const TextStyle(
                                     fontFamily: "BreezeSans",
                                     fontSize: 12,
@@ -1340,7 +1418,7 @@ class _OrdersState extends State<Orders> {
                           height: MediaQuery.of(context).size.height - 250,
                           viewportFraction: 1.0,
                         ),
-                        carouselController: _controller,
+                        carouselController: controller,
                       ),
                       const SizedBox(
                         height: 10,
@@ -1350,9 +1428,9 @@ class _OrdersState extends State<Orders> {
                         children: <Widget>[
                           ElevatedButton(
                             onPressed: () {
-                              _controller.previousPage();
+                              controller.previousPage();
                               setState(() {
-                                _isSecondPage = false;
+                                isSecondPage = false;
                               });
                             },
                             child: const Text('back'),
@@ -1370,13 +1448,13 @@ class _OrdersState extends State<Orders> {
                           //       );
                           //     },
                           //     child: const Text("Add new form")),
-                          if (!_isSecondPage)
+                          if (!isSecondPage)
                             ElevatedButton(
-                              onPressed: (_selectedProducts.isNotEmpty)
+                              onPressed: (selectedProducts.isNotEmpty)
                                   ? () {
-                                      _controller.nextPage();
+                                      controller.nextPage();
                                       setState(() {
-                                        _isSecondPage = true;
+                                        isSecondPage = true;
                                       });
                                     }
                                   : null,
@@ -1385,7 +1463,7 @@ class _OrdersState extends State<Orders> {
                           const SizedBox(
                             width: 10,
                           ),
-                          if (_isSecondPage)
+                          if (isSecondPage)
                             ElevatedButton(
                               onPressed: () async {
                                 // var _priceOfItemsArray =
@@ -1409,22 +1487,22 @@ class _OrdersState extends State<Orders> {
 
                                 // print(_products);
 
-                                var _priceOfItemsArray =
+                                var priceOfItemsArray =
                                     _priceValues.map((item) => item['value']);
-                                var _numberOfItemsArray = _numberOfItemsValues
+                                var numberOfItemsArray = _numberOfItemsValues
                                     .map((item) => item['value']);
 
-                                var _products =
-                                    _selectedProducts.map((product) {
-                                  var _product = {
+                                var products =
+                                    selectedProducts.map((product) {
+                                  var productData = {
                                     '"Product Name"':
                                         '"${product["Product Title"]}"',
                                     '"Product Price"':
-                                        '"${_priceOfItemsArray.elementAt(_selectedProducts.indexOf(product))}"',
+                                        '"${priceOfItemsArray.elementAt(selectedProducts.indexOf(product))}"',
                                     '"Number of Item"':
-                                        '"${_numberOfItemsArray.elementAt(_selectedProducts.indexOf(product))}"'
+                                        '"${numberOfItemsArray.elementAt(selectedProducts.indexOf(product))}"'
                                   };
-                                  return _product;
+                                  return productData;
                                 });
 
                                 // print(_products);
@@ -1438,7 +1516,7 @@ class _OrdersState extends State<Orders> {
 
                                 // print(cool);
 
-                                var cool = _products.toList();
+                                var cool = products.toList();
                                 final decoded = json.decode(cool.toString());
                                 var productList = ProductList.fromJson(decoded);
 
@@ -1449,7 +1527,7 @@ class _OrdersState extends State<Orders> {
                                 int howManyAvailable(String productName) {
                                   int itemNumber = 0;
 
-                                  for (var element in _inventorySnapshot) {
+                                  for (var element in inventorySnapshot) {
                                     if (element["Product Title"] ==
                                         productName) {
                                       print(
@@ -1466,7 +1544,7 @@ class _OrdersState extends State<Orders> {
                                     String productName, int howMany) async {
                                   int itemNumber = 0;
 
-                                  for (var element in _inventorySnapshot) {
+                                  for (var element in inventorySnapshot) {
                                     if (element["Product Title"] ==
                                         productName) {
                                       itemNumber = element["Items Bought"];
@@ -1536,7 +1614,7 @@ class _OrdersState extends State<Orders> {
                                 print(selectedPaymentType);
                                 print(sellingDate.text);
                                 print(approxDeliveryDate.text);
-                                print(_additionalNotesController.text);
+                                print(additionalNotesController.text);
 
                                 // OrderModel newOrder = OrderModel(
                                 //     cool.toString(),
@@ -1561,7 +1639,7 @@ class _OrdersState extends State<Orders> {
                                       selectedPaymentType,
                                       sellingDate.text,
                                       approxDeliveryDate.text,
-                                      _additionalNotesController.text);
+                                      additionalNotesController.text);
 
                                   createOrderDocument(newOrder);
 

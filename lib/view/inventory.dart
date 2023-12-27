@@ -171,8 +171,7 @@ class _InventoryState extends State<Inventory> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Colors.white,
-                            primary: Colors.white,
+                            shadowColor: Colors.white, backgroundColor: Colors.white,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -198,8 +197,7 @@ class _InventoryState extends State<Inventory> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Colors.red,
-                            primary: Colors.red,
+                            shadowColor: Colors.red, backgroundColor: Colors.red,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -376,7 +374,8 @@ class _InventoryState extends State<Inventory> {
         floatingActionButton: FloatingActionButton(
           backgroundColor: const Color(0xFF5138ED),
           onPressed: newInventoryPopup,
-          child: const Icon(Icons.add),
+          child: const Icon(Icons.add,
+              color: Colors.white),
         ),
       ),
     );
@@ -421,8 +420,8 @@ class _InventoryState extends State<Inventory> {
     String selectedProduct = products[0].toString();
     String selectedSupplier = suppliers[0].toString();
 
-    TextEditingController _priceController = TextEditingController();
-    TextEditingController _numberOfItemsController = TextEditingController();
+    TextEditingController priceController = TextEditingController();
+    TextEditingController numberOfItemsController = TextEditingController();
 
     returnProductReference(String product) {
       for (var element in productSnapshots.docs) {
@@ -457,8 +456,8 @@ class _InventoryState extends State<Inventory> {
     }
 
     resetTextControllers() {
-      _priceController.clear();
-      _numberOfItemsController.clear();
+      priceController.clear();
+      numberOfItemsController.clear();
     }
 
     return showDialog(
@@ -495,14 +494,14 @@ class _InventoryState extends State<Inventory> {
                           icon: const Icon(Icons.keyboard_arrow_down),
                           items: products
                               .map((item) => DropdownMenuItem<String>(
-                                    child: Text(item),
                                     value: item,
+                                    child: Text(item),
                                   ))
                               .toList(),
                           onChanged: (String? newValue) {
                             setState(() {
                               selectedProduct = newValue!;
-                              print(selectedProduct + " is selected");
+                              print("$selectedProduct is selected");
                             });
                           },
                         ),
@@ -521,14 +520,14 @@ class _InventoryState extends State<Inventory> {
                           icon: const Icon(Icons.keyboard_arrow_down),
                           items: suppliers
                               .map((item) => DropdownMenuItem<String>(
-                                    child: Text(item),
                                     value: item,
+                                    child: Text(item),
                                   ))
                               .toList(),
                           onChanged: (String? newValue) {
                             setState(() {
                               selectedSupplier = newValue!;
-                              print(selectedSupplier + " is selected");
+                              print("$selectedSupplier is selected");
                             });
                           },
                         ),
@@ -556,7 +555,7 @@ class _InventoryState extends State<Inventory> {
                             // width: 250,
                             child: TextField(
                               keyboardType: TextInputType.number,
-                              controller: _numberOfItemsController,
+                              controller: numberOfItemsController,
                               style: const TextStyle(
                                   fontFamily: "BreezeSans",
                                   fontSize: 12,
@@ -591,7 +590,7 @@ class _InventoryState extends State<Inventory> {
                             // width: 250,
                             child: TextField(
                               keyboardType: TextInputType.number,
-                              controller: _priceController,
+                              controller: priceController,
                               style: const TextStyle(
                                   fontFamily: "BreezeSans",
                                   fontSize: 12,
@@ -613,8 +612,7 @@ class _InventoryState extends State<Inventory> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Colors.white,
-                            primary: Colors.white,
+                            shadowColor: Colors.white, backgroundColor: Colors.white,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -641,8 +639,7 @@ class _InventoryState extends State<Inventory> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Theme.of(context).primaryColor,
-                            primary: Theme.of(context).primaryColor,
+                            shadowColor: Theme.of(context).primaryColor, backgroundColor: Theme.of(context).primaryColor,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -670,8 +667,8 @@ class _InventoryState extends State<Inventory> {
                               selectedSupplier,
                               returnSupplierReference(selectedSupplier)
                                   .toString(),
-                              int.parse(_numberOfItemsController.text),
-                              double.parse(_priceController.text),
+                              int.parse(numberOfItemsController.text),
+                              double.parse(priceController.text),
                             );
                             createInventoryDocument(newModel);
                             resetTextControllers();

@@ -178,8 +178,7 @@ class _CustomersState extends State<Customers> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Colors.white,
-                            primary: Colors.white,
+                            shadowColor: Colors.white, backgroundColor: Colors.white,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -205,8 +204,7 @@ class _CustomersState extends State<Customers> {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             // minimumSize: const Size(20, 10),
-                            shadowColor: Colors.red,
-                            primary: Colors.red,
+                            shadowColor: Colors.red, backgroundColor: Colors.red,
                             // padding: const EdgeInsets.symmetric(
                             //     horizontal: 100, vertical: 12),
                             shape: RoundedRectangleBorder(
@@ -442,7 +440,7 @@ class _CustomersState extends State<Customers> {
 
   @override
   Widget build(BuildContext context) {
-    DateTime _date = DateTime.now();
+    DateTime date = DateTime.now();
     TextEditingController dateCtl = TextEditingController();
     TextEditingController nameController = TextEditingController();
     TextEditingController initialController = TextEditingController();
@@ -555,7 +553,8 @@ class _CustomersState extends State<Customers> {
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: const Color(0xFF5138ED),
-          child: const Icon(Icons.add),
+          child: const Icon(Icons.add,
+            color: Colors.white),
           onPressed: () async {
             showDialog(
               barrierDismissible: false,
@@ -763,7 +762,7 @@ class _CustomersState extends State<Customers> {
                                               context: context,
                                               initialDate: DateTime.now(),
                                               firstDate: DateTime(1920),
-                                              lastDate: _date,
+                                              lastDate: date,
                                             ).then((selectedDate) {
                                               if (selectedDate != null) {
                                                 dateCtl.text =
@@ -1208,8 +1207,7 @@ class _CustomersState extends State<Customers> {
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         // minimumSize: const Size(20, 10),
-                                        shadowColor: Colors.white,
-                                        primary: Colors.white,
+                                        shadowColor: Colors.white, backgroundColor: Colors.white,
                                         // padding: const EdgeInsets.symmetric(
                                         //     horizontal: 100, vertical: 12),
                                         shape: RoundedRectangleBorder(
@@ -1239,8 +1237,7 @@ class _CustomersState extends State<Customers> {
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         shadowColor:
-                                            Theme.of(context).primaryColor,
-                                        primary: Theme.of(context).primaryColor,
+                                            Theme.of(context).primaryColor, backgroundColor: Theme.of(context).primaryColor,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(50),

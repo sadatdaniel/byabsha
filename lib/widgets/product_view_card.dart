@@ -22,11 +22,11 @@ class ProductCard extends StatelessWidget {
           backgroundColor: Colors.white,
           title: _buildTitle(),
           trailing: const SizedBox(),
-          children: <Widget>[
+          children: const <Widget>[
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Row(
-                children: const [
+                children: [
                   Text("Herzlich Willkommen"),
                   Spacer(),
                   Icon(Icons.check),
@@ -34,9 +34,9 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Row(
-                children: const [
+                children: [
                   Text("Das Kursmenu"),
                   Spacer(),
                   Icon(Icons.check),

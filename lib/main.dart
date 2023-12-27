@@ -13,15 +13,16 @@ Future<void> main() async {
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
   await Firebase.initializeApp(
-      // options: FirebaseOptions.fromMap(map),
-      // options: FirebaseOptions(
-      //     apiKey: "xxxx",
-      //     authDomain: "xxxx",
-      //     projectId: "xxxx",
-      //     storageBucket: "xxx",
-      //     messagingSenderId: "xxxxx",
-      //     appId: "xxxx"),
-      );
+    // options: FirebaseOptions.fromMap(map),
+    options: const FirebaseOptions(
+        apiKey: "AIzaSyBEvjc2yWblMNsrFdNf6mtelNnwVECdUn4",
+        // authDomain: "xxxx",
+        projectId: "byabsha-91faa",
+        storageBucket: "byabsha-91faa.appspot.com",
+        messagingSenderId: "607840287655",
+        appId: "1:607840287655:android:e11be87e00dcc567e31482"),
+  );
+  // await Firebase.initializeApp();
   runApp(
     const MyApp(),
   );

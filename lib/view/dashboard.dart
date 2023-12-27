@@ -90,9 +90,9 @@ class _DashBoardState extends State<DashBoard> {
           padding: const EdgeInsets.all(30),
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
-                  const Flexible(
+                  Flexible(
                     child: Text(
                       "Pending orders",
                       style: kH1TextStyle,
@@ -224,8 +224,8 @@ class _DashBoardState extends State<DashBoard> {
           padding: const EdgeInsets.all(30),
           child: Column(
             children: [
-              Row(
-                children: const [
+              const Row(
+                children: [
                   Flexible(
                     child: Text(
                       "Urgent Product Refill",
@@ -301,8 +301,8 @@ class _DashBoardState extends State<DashBoard> {
                                                               "Only ${inventorySnapshot.data?.docs[index]["Items Bought"]} are available"),
                                                         ],
                                                       ),
-                                                      Row(
-                                                        children: const [
+                                                      const Row(
+                                                        children: [
                                                           Text(
                                                               "Order to avoid item shortage"),
                                                         ],
@@ -325,20 +325,34 @@ class _DashBoardState extends State<DashBoard> {
             ],
           )),
     );
-    MultiSplitView multiSplitView =
-        MultiSplitView(axis: Axis.vertical, children: [
-      // MultiSplitView(children: [monthlySummary, productPerformanceCard]),
-      MultiSplitView(children: [pendingOpList, refillList])
-    ], initialAreas: [
-      Area(weight: 0.4),
-      // Area(weight: 0.1),
-      // Area(weight: 0.7)
-    ]);
+    MultiSplitView multiSplitView = MultiSplitView(
+      axis: Axis.vertical,
+      children: [
+        // MultiSplitView(children: [monthlySummary, productPerformanceCard]),
+        MultiSplitView(children: [pendingOpList, refillList])
+      ],
+      // initialAreas: [
+      //   Area(weight: 0.4),
+
+      //   // Area(weight: 0.1),
+      //   // Area(weight: 0.7)
+      // ],
+      // dividerBuilder:
+      //     (axis, index, resizable, dragging, highlighted, themeData) {
+      //   return Container(
+      //     color: dragging ? Colors.grey[300] : Colors.grey[100],
+      //     child: Icon(
+      //       Icons.drag_indicator,
+      //       color: highlighted ? Colors.grey[600] : Colors.grey[400],
+      //     ),
+      //   );
+      // },
+    );
     // print("Printing from LIstviwer");
     // print(customerSnapshot);
     MultiSplitViewTheme theme = MultiSplitViewTheme(
-      child: multiSplitView,
       data: MultiSplitViewThemeData(dividerThickness: 24),
+      child: multiSplitView,
     );
     // final orientation = MediaQuery.of(context).orientation;
     return Expanded(

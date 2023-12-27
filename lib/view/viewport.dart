@@ -50,6 +50,7 @@ class _ViewPortState extends State<ViewPort> {
           style: TextStyle(
             fontFamily: "BreezeSans",
             fontSize: 20,
+            color: Colors.white
           ),
         ),
         // automaticallyImplyLeading: false,
